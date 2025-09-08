@@ -96,7 +96,7 @@ Simple as that
 
 
 ## Current things i find being an issue right now
-- [ ] Fix sudo password parsing  
+- [x] Fix sudo password parsing  
 - [ ] Add Updating system
 - [ ] Beautify
 
