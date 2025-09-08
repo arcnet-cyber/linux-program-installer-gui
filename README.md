@@ -52,7 +52,7 @@ If a listed Operating system doesnt work Post it in the issues and I'll try and 
 
 ```
 git clone https://github.com/arcnet-cyber/linux-program-installer-gui.git
-cd ~/linux-program-installer/XPlatformInstaller
+cd ~/linux-program-installer-gui/XPlatformInstaller
 chmod +x setup.sh
 chmod +x uninstall.sh
 ./setup.sh
