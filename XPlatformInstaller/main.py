@@ -1,5 +1,6 @@
 import os
 import subprocess
+import sys
 import tkinter as tk
 from tkinter import messagebox
 from managers import get_manager
@@ -14,6 +15,15 @@ def detect_os_id():
     except FileNotFoundError:
         return None
     return None
+
+
+def ensure_sudo():
+    """Prompt for sudo once before GUI starts."""
+    try:
+        subprocess.run(["sudo", "-v"], check=True)
+    except subprocess.CalledProcessError:
+        messagebox.showerror("Authentication Failed", "Sudo authentication failed. Exiting.")
+        sys.exit(1)
 
 
 class PackageGUI(tk.Tk):
@@ -202,6 +212,8 @@ class PackageGUI(tk.Tk):
 
 
 def main():
+    ensure_sudo()  # 🔹 Prompt once for sudo before GUI starts
+
     os_id = detect_os_id()
     if not os_id:
         messagebox.showerror("OS Detection Error", "Unable to detect operating system.")

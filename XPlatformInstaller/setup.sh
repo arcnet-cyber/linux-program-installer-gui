@@ -65,7 +65,7 @@ USER_SHELL=$(basename "$SHELL")
 case "$USER_SHELL" in
     bash)
         SHELL_RC="$HOME/.bashrc"
-        ALIAS_CMD="alias installer='sudo python3 \"$TOOL_ENTRY\"'"
+        ALIAS_CMD="alias installer='python3 \"$TOOL_ENTRY\"'"
         if ! grep -Fxq "$ALIAS_CMD" "$SHELL_RC"; then
             echo "" >> "$SHELL_RC"            # Add blank line
             echo "$ALIAS_CMD" >> "$SHELL_RC"
@@ -87,7 +87,7 @@ case "$USER_SHELL" in
         ;;
     fish)
         FISH_CONFIG="$HOME/.config/fish/config.fish"
-        FISH_FUNC="function installer\n    sudo python3 \"$TOOL_ENTRY\"\nend"
+        FISH_FUNC="function installer\n    python3 \"$TOOL_ENTRY\"\nend"
         if ! grep -Fq "function installer" "$FISH_CONFIG"; then
             echo -e "\n$FISH_FUNC" >> "$FISH_CONFIG"
             echo "Function 'installer' added to $FISH_CONFIG"
