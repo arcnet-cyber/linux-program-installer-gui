@@ -1,9 +1,9 @@
-# Cross Platform Installer
+# Cross Platform Installer Gui
 A cross platform program installer designed for beginners to get used to linux.  
 It works with BASH, ZSH and FISH shells.  
-This is the TUI version a gui version is available at:
+This is the GUI version a TUI version is available at:
 ```
-https://github.com/arcnet-cyber/linux-program-installer-gui
+https://github.com/arcnet-cyber/linux-program-installer
 ```
   
 ## Implemented Package Managers and Distros
@@ -51,7 +51,7 @@ If a listed Operating system doesnt work Post it in the issues and I'll try and 
 ### Git-clone method
 
 ```
-git clone https://github.com/arcnet-cyber/linux-program-installer.git
+git clone https://github.com/arcnet-cyber/linux-program-installer-gui.git
 cd ~/linux-program-installer/XPlatformInstaller
 chmod +x setup.sh
 chmod +x uninstall.sh
@@ -79,7 +79,7 @@ Run uninstall.sh to remove the alias and project files
 
 ## Dependancies
 
-So this only runs using shell commandsand Python3 so easy enough to install and test out.
+So this only runs using shell commands, Python3 and Tkinker so easy enough to install and test out.
 The install.sh script will install the dependancies for you.
 
 
