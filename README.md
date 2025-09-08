@@ -96,8 +96,8 @@ Simple as that
 
 
 ## Current things i find being an issue right now
-- [x] Fix void compatibilty
-- [x] Fix DNF Visuals
-- [x] Add the ability to uninstall files using the cross package mananger
+- [] Fix sudo password parsing  
+- [] Add Updating system
+- [] Beautify
 
 > Still definitly a work in progress but will convert to lower level languages when i can be bothered
